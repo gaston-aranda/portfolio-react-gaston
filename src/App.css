@@ -1,0 +1,355 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #242826;
+  background-color: #e7f1f2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+a {
+  font-family: inherit;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 24px;
+  color: #242826;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(52, 148, 177, 0.55),
+      transparent 35%
+    ),
+    linear-gradient(
+      160deg,
+      #f5f6f2 0%,
+      #edf3ef 55%,
+      #dce9e5 100%
+    );
+}
+
+/* Presentación */
+
+.hero {
+  max-width: 1050px;
+  margin: 0 auto 35px;
+  padding: 55px 30px;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0 0 18px;
+  font-size: clamp(2.4rem, 7vw, 5rem);
+  line-height: 1;
+  color: #242826;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 28px;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #39423e;
+}
+
+.hero button {
+  border: none;
+  border-radius: 10px;
+  padding: 14px 22px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #242826;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.hero button:hover {
+  background-color: #426451;
+  transform: translateY(-2px);
+}
+
+/* Habilidades */
+
+.skills {
+  max-width: 850px;
+  margin: 0 auto 40px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  list-style: none;
+}
+
+.skills li {
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  color: #242826;
+  background-color: #69bdd2;
+}
+
+/* Sobre mí */
+
+.about,
+.sobre-mi {
+  max-width: 900px;
+  margin: 0 auto 55px;
+  padding: 35px;
+  border-left: 5px solid #426451;
+  border-radius: 18px;
+  background-color: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 12px 30px rgba(36, 40, 38, 0.12);
+}
+
+.about h2,
+.sobre-mi h2 {
+  margin-top: 0;
+  color: #242826;
+}
+
+.about p,
+.sobre-mi p {
+  margin-bottom: 0;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #39423e;
+}
+
+/* Proyectos */
+
+.projects-section {
+  max-width: 1100px;
+  margin: 0 auto 65px;
+}
+
+.projects-section > h2 {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 2rem;
+  color: #242826;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-items: stretch;
+  gap: 24px;
+}
+
+.project-card {
+  min-width: 0;
+  min-height: 340px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(66, 100, 81, 0.22);
+  border-radius: 18px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 25px rgba(36, 40, 38, 0.1);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 35px rgba(36, 40, 38, 0.16);
+}
+
+.project-card h3 {
+  margin: 0 0 14px;
+  font-size: 1.35rem;
+  color: #242826;
+}
+
+.project-card p {
+  margin: 0 0 20px;
+  flex-grow: 1;
+  line-height: 1.65;
+  color: #39423e;
+}
+
+.project-card ul {
+  margin: 0 0 16px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+}
+
+.project-card li,
+.project-card span {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #28434a;
+  background-color: #ccebf2;
+}
+
+.project-link {
+  width: fit-content;
+  margin-top: 14px;
+  padding: 12px 18px;
+  border-radius: 9px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #242826;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.project-link:hover {
+  color: #242826;
+  background-color: #f2c14e;
+  transform: translateY(-2px);
+}
+
+/* Contacto */
+
+.contacto {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 45px 30px;
+  border-radius: 22px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #242826;
+}
+
+.contacto h2 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.contacto p {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  line-height: 1.7;
+  color: #edf3ef;
+}
+
+.contacto-enlaces {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+}
+
+.contacto-boton {
+  min-width: 145px;
+  padding: 14px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #242826;
+  background-color: #69bdd2;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.contacto-boton:hover {
+  color: #242826;
+  background-color: #f2c14e;
+  transform: translateY(-2px);
+}
+
+/* Celulares */
+
+@media (max-width: 650px) {
+  .app {
+    padding: 25px 16px;
+  }
+
+  .hero {
+    padding: 35px 12px;
+  }
+
+  .hero h1 {
+    font-size: 2.7rem;
+  }
+
+  .about,
+  .sobre-mi {
+    padding: 26px 22px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: 0;
+  }
+
+  .contacto {
+    padding: 35px 20px;
+  }
+
+  .contacto-enlaces {
+    flex-direction: column;
+  }
+
+  .contacto-boton {
+    width: 100%;
+  }
+}
+/* Correcciones de alineación */
+
+.project-card {
+  text-align: left;
+  align-items: stretch;
+}
+
+.project-card h3,
+.project-card p {
+  width: 100%;
+  text-align: left;
+}
+
+.project-card ul,
+.project-card div {
+  width: 100%;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.project-card .project-link {
+  align-self: flex-start;
+}
+
+/* Título de contacto en blanco */
+
+.app .contacto h2 {
+  color: #ffffff !important;
+}
+.project-card > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 4px;
+}
