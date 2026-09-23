@@ -1,9 +1,16 @@
+interface ProyectoProps {
+  titulo: string
+  descripcion: string
+  tecnologias: string[]
+  enlace: string
+}
+
 function Proyecto({
   titulo,
   descripcion,
   tecnologias,
   enlace,
-}) {
+}: ProyectoProps) {
   return (
     <article className="project-card">
       <h2>{titulo}</h2>

@@ -1,4 +1,8 @@
-function Habilidades({ habilidades }) {
+interface HabilidadesProps {
+  habilidades: string[]
+}
+
+function Habilidades({ habilidades }: HabilidadesProps) {
   return (
     <ul className="skills">
       {habilidades.map((habilidad) => (
