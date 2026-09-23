@@ -13,7 +13,6 @@ const habilidades = [
   'React',
   'UX/UI',
 ]
-
   
 const proyectos = [
   {
@@ -21,7 +20,7 @@ const proyectos = [
     titulo: 'Portfolio profesional',
     descripcion:
       'Mi sitio personal para presentar mis conocimientos y proyectos.',
-    tecnologias: ['HTML', 'CSS', 'JavaScript'],
+    tecnologias: ['HTML', 'CSS', 'JavaScript', 'React', 'TypeScript'],
 
     enlace:
       'https://gaston-aranda.github.io/portfolio-gaston-aranda/',
@@ -49,7 +48,7 @@ const proyectos = [
     titulo: 'Mar Austral',
     descripcion:
       'Sitio web para una empresa de servicios marítimos de Ushuaia.',
-    tecnologias: ['HTML', 'CSS', 'JavaScript'],
+    tecnologias: ['HTML', 'CSS', 'JavaScript', 'React'],
     enlace:
       'https://gaston-aranda.github.io/portfolio-gaston-aranda/proyectos/proyecto-maritimo-ushuaia/',
   },
@@ -58,7 +57,7 @@ const proyectos = [
     titulo: 'Servicios profesionales',
     descripcion:
       'Sitio web para presentar servicios profesionales de manera clara.',
-    tecnologias: ['HTML', 'CSS', 'JavaScript'],
+   tecnologias: ['HTML', 'CSS', 'JavaScript', 'React'],
     enlace:
       'https://gaston-aranda.github.io/portfolio-gaston-aranda/proyectos/servicios-profesionales/',
   },
