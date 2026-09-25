@@ -144,19 +144,19 @@ function App() {
         <section id="inicio" className="hero hero-video-layout">
           <div className="hero-content">
             <div className="hero-title-block">
-              <p className="hero-kicker">Frontend · React · UX/UI</p>
+             <p className="hero-kicker">GASTÓN ARANDA · DESARROLLADOR FRONTEND</p>
 
-              <h1>
-                Desarrollo experiencias web
-                <span> claras y modernas.</span>
-              </h1>
+    <h1>
+  Creo sitios web
+  <span> que conectan.</span>
+</h1>
             </div>
 
             <div className="hero-details">
               <p className="hero-description">
-                Soy Gastón Aranda. Creo sitios rápidos, adaptables y pensados
-                para conectar proyectos, empresas y personas.
-              </p>
+  Diseño y desarrollo sitios rápidos, adaptables y fáciles de usar.
+  Conocé lo que puedo crear para tu proyecto.
+</p>
 
               <div className="hero-actions">
                 <a className="button button-primary" href="#proyectos">
@@ -164,9 +164,6 @@ function App() {
                   <span aria-hidden="true">↘</span>
                 </a>
 
-                <a className="button button-secondary" href="#contacto">
-                  Contactarme
-                </a>
               </div>
 
               <button
