@@ -13,32 +13,30 @@ const habilidades = [
   'React',
   'UX/UI',
 ]
-  
+
 const proyectos = [
   {
     id: 1,
-    titulo: 'Portfolio profesional',
+    titulo: 'Portfolio inicial',
     descripcion:
-      'Mi sitio personal para presentar mis conocimientos y proyectos.',
-    tecnologias: ['HTML', 'CSS', 'JavaScript', 'React', 'TypeScript'],
-
-    enlace:
-      'https://gaston-aranda.github.io/portfolio-gaston-aranda/',
+      'Mi primer portfolio publicado. Lo desarrollé con HTML, CSS y JavaScript para presentar mis proyectos y practicar el diseño adaptable.',
+    tecnologias: ['HTML', 'CSS', 'JavaScript'],
+    enlace: 'https://gaston-aranda.github.io/portfolio-gaston-aranda/',
   },
   {
     id: 2,
     titulo: 'Pinamar Turismo',
     descripcion:
-      'Proyecto turístico con información, actividades y lugares de Pinamar.',
+      'Proyecto turístico de práctica. Organicé lugares y actividades de Pinamar e incorporé un formulario para planificar una visita.',
     tecnologias: ['UX/UI', 'HTML', 'CSS', 'JavaScript'],
     enlace:
-      'https://gaston-aranda.github.io/portfolio-gaston-aranda/proyectos/pinamar-turismo/',
+      'https://gaston-aranda.github.io/portfolio-gaston-aranda/proyectos/pinamar-turismo/index.html',
   },
   {
     id: 3,
     titulo: 'Madera Sur',
     descripcion:
-      'Landing page comercial para una empresa de muebles y carpintería.',
+      'Proyecto de práctica: diseñé una landing page adaptable para presentar servicios de carpintería y facilitar el contacto.',
     tecnologias: ['HTML', 'CSS', 'Diseño adaptable'],
     enlace:
       'https://gaston-aranda.github.io/portfolio-gaston-aranda/proyectos/Carpinteria-muebles/',
@@ -47,7 +45,7 @@ const proyectos = [
     id: 4,
     titulo: 'Mar Austral',
     descripcion:
-      'Sitio web para una empresa de servicios marítimos de Ushuaia.',
+      'Sitio web para presentar servicios marítimos de Ushuaia de forma clara y accesible.',
     tecnologias: ['HTML', 'CSS', 'JavaScript', 'React'],
     enlace:
       'https://gaston-aranda.github.io/portfolio-gaston-aranda/proyectos/proyecto-maritimo-ushuaia/',
@@ -56,8 +54,8 @@ const proyectos = [
     id: 5,
     titulo: 'Servicios profesionales',
     descripcion:
-      'Sitio web para presentar servicios profesionales de manera clara.',
-   tecnologias: ['HTML', 'CSS', 'JavaScript', 'React'],
+      'Sitio web para presentar servicios profesionales y facilitar el contacto con posibles clientes.',
+    tecnologias: ['HTML', 'CSS', 'JavaScript', 'React'],
     enlace:
       'https://gaston-aranda.github.io/portfolio-gaston-aranda/proyectos/servicios-profesionales/',
   },
@@ -65,7 +63,7 @@ const proyectos = [
 
 function App() {
   const [mostrarHabilidades, setMostrarHabilidades] = useState(false)
-const aguaRef = useRef<HTMLDivElement | null>(null)
+  const aguaRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
     let animationFrame: number | null = null
