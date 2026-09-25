@@ -1449,3 +1449,20 @@ button:focus-visible {
     font-size: 0.7rem;
   }
 }
+.project-card .project-preview {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  margin: -24px 0 24px;
+  overflow: hidden;
+}
+
+.project-card .project-preview img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}

@@ -3,6 +3,7 @@ interface ProyectoProps {
   descripcion: string
   tecnologias: string[]
   enlace: string
+  imagen?: string
 }
 
 function Proyecto({
@@ -10,10 +11,27 @@ function Proyecto({
   descripcion,
   tecnologias,
   enlace,
+  imagen,
 }: ProyectoProps) {
   return (
     <article className="project-card">
-      <h2>{titulo}</h2>
+      {imagen && (
+        <a
+          className="project-preview"
+          href={enlace}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`Ver proyecto ${titulo}`}
+        >
+          <img
+            src={imagen}
+            alt={`Captura del sitio ${titulo}`}
+            loading="lazy"
+          />
+        </a>
+      )}
+
+      <h3>{titulo}</h3>
       <p>{descripcion}</p>
 
       <div className="technologies">

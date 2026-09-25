@@ -254,6 +254,11 @@ function App() {
                 descripcion={proyecto.descripcion}
                 tecnologias={proyecto.tecnologias}
                 enlace={proyecto.enlace}
+                imagen={
+                  proyecto.id === 2
+                    ? `${import.meta.env.BASE_URL}pinamar.png`
+                    : undefined
+                }
               />
             ))}
           </div>
