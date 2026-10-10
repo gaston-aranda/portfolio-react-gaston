@@ -1184,16 +1184,21 @@ button:focus-visible {
     display: none;
   }
 
-  .navbar {
+   .navbar {
     padding: 12px 0;
-    align-items: flex-start;
+    align-items: center;
+    gap: 10px;
   }
 
   .main-nav {
-    max-width: 245px;
-    flex-wrap: wrap;
+    max-width: none;
+    flex-wrap: nowrap;
     justify-content: flex-end;
-    row-gap: 10px;
+    gap: 11px;
+  }
+
+  .main-nav a {
+    font-size: 0.68rem;
   }
 
   .hero {
@@ -1606,5 +1611,18 @@ button:focus-visible {
 
   .hero.hero-video-layout {
     min-height: 680px;
+  }
+}
+@media (max-width: 360px) {
+  .brand {
+    font-size: 1.8rem;
+  }
+
+  .main-nav {
+    gap: 8px;
+  }
+
+  .main-nav a {
+    font-size: 0.62rem;
   }
 }

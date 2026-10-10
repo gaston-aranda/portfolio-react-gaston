@@ -3,6 +3,7 @@ import Habilidades from './components/Habilidades'
 import Proyecto from './components/Proyecto'
 import SobreMi from './components/SobreMi'
 import Contacto from './components/Contacto'
+import { FiArrowDownRight, FiArrowUpRight } from 'react-icons/fi'
 import './App.css'
 
 const habilidades = [
@@ -121,7 +122,7 @@ function App() {
 
             <a className="topbar-contact" href="#contacto">
               Hablemos
-              <span aria-hidden="true">↗</span>
+              <FiArrowUpRight aria-hidden="true" size={16} />
             </a>
           </div>
         </div>
@@ -161,7 +162,7 @@ function App() {
               <div className="hero-actions">
                 <a className="button button-primary" href="#proyectos">
                   Ver proyectos
-                  <span aria-hidden="true">↘</span>
+                  <FiArrowDownRight aria-hidden="true" size={18} />
                 </a>
 
               </div>
