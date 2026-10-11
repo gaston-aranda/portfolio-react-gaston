@@ -5,6 +5,7 @@ import SobreMi from './components/SobreMi'
 import Contacto from './components/Contacto'
 import { FiArrowDownRight, FiArrowUpRight } from 'react-icons/fi'
 import './App.css'
+import './proyectos.css'
 
 const habilidades = [
   'HTML',
@@ -13,52 +14,68 @@ const habilidades = [
   'TypeScript',
   'React',
   'UX/UI',
+  'Figma',
+  'Illustrator',
+  'Planos y manuales',
 ]
 
-const proyectos = [
+interface DatosProyecto {
+  id: number
+  titulo: string
+  tipo?: string
+  descripcion?: string
+  desafio?: string
+  hice?: string
+  aprendi?: string
+  tecnologias: string[]
+  enlace: string
+  imagen?: string
+}
+
+const proyectos: DatosProyecto[] = [
   {
     id: 1,
-    titulo: 'Portfolio inicial',
-    descripcion:
-      'Mi primer portfolio publicado. Lo desarrollé con HTML, CSS y JavaScript para presentar mis proyectos y practicar el diseño adaptable.',
-    tecnologias: ['HTML', 'CSS', 'JavaScript'],
-    enlace: 'https://gaston-aranda.github.io/portfolio-gaston-aranda/',
-  },
-  {
-    id: 2,
     titulo: 'Pinamar Turismo',
-    descripcion:
-      'Proyecto turístico de práctica. Organicé lugares y actividades de Pinamar e incorporé un formulario para planificar una visita.',
+    tipo: 'PROYECTO CONCEPTUAL',
+    desafio:
+      'Pinamar se asocia sobre todo con el verano. Imaginé un sitio que la presente como destino para visitar todo el año, con una estética cercana al turismo internacional y un lugar para su vínculo con el arte contemporáneo.',
+    hice: 'Diseñé y programé la experiencia completa en código. Reuní guiadas, cabalgatas, gastronomía, deportes, hospedajes y balnearios, pensado para turistas nacionales e internacionales, e incorporé un formulario para planificar la visita.',
+    aprendi:
+      'A pensar el sitio desde el visitante: ordenar la información según lo que cada turista necesita encontrar, y no solo según lo que se ve bien.',
     tecnologias: ['UX/UI', 'HTML', 'CSS', 'JavaScript'],
     enlace:
       'https://gaston-aranda.github.io/portfolio-gaston-aranda/proyectos/pinamar-turismo/index.html',
+    imagen: 'pinamar.png',
   },
   {
-    id: 3,
+    id: 2,
     titulo: 'Madera Sur',
-    descripcion:
-      'Proyecto de práctica: diseñé una landing page adaptable para presentar servicios de carpintería y facilitar el contacto.',
+    tipo: 'PROYECTO CONCEPTUAL',
+    desafio:
+      'Mostrar mi trabajo digital creando el sitio de una carpintería a medida, un rubro que conozco de primera mano.',
+    hice: 'Una landing de una página con portada, galería de trabajos, el proceso en tres pasos (diseño personalizado, fabricación, entrega e instalación) y llamados a la acción para pedir presupuesto o escribir por WhatsApp.',
     tecnologias: ['HTML', 'CSS', 'Diseño adaptable'],
     enlace:
       'https://gaston-aranda.github.io/portfolio-gaston-aranda/proyectos/Carpinteria-muebles/',
   },
   {
-    id: 4,
+    id: 3,
     titulo: 'Mar Austral',
-    descripcion:
-      'Sitio web para presentar servicios marítimos de Ushuaia de forma clara y accesible.',
-    tecnologias: ['HTML', 'CSS', 'JavaScript', 'React'],
+    tipo: 'PROYECTO CONCEPTUAL',
+    desafio:
+      'Presentar de forma clara y accesible los servicios de una empresa marítima y logística del puerto de Ushuaia.',
+    hice: 'Un sitio de una página con servicios (logística portuaria, apoyo a embarcaciones y operaciones australes), sección institucional y formulario de contacto.',
+    tecnologias: ['HTML', 'CSS', 'JavaScript'],
     enlace:
       'https://gaston-aranda.github.io/portfolio-gaston-aranda/proyectos/proyecto-maritimo-ushuaia/',
   },
   {
-    id: 5,
-    titulo: 'Servicios profesionales',
+    id: 4,
+    titulo: 'Portfolio inicial',
     descripcion:
-      'Sitio web para presentar servicios profesionales y facilitar el contacto con posibles clientes.',
-    tecnologias: ['HTML', 'CSS', 'JavaScript', 'React'],
-    enlace:
-      'https://gaston-aranda.github.io/portfolio-gaston-aranda/proyectos/servicios-profesionales/',
+      'Mi primer portfolio publicado. Lo desarrollé con HTML, CSS y JavaScript para presentar mis proyectos y practicar el diseño adaptable.',
+    tecnologias: ['HTML', 'CSS', 'JavaScript'],
+    enlace: 'https://gaston-aranda.github.io/portfolio-gaston-aranda/',
   },
 ]
 
@@ -117,7 +134,7 @@ function App() {
           <div className="topbar-inner">
             <p className="availability">
               <span aria-hidden="true" />
-              Disponible para oportunidades trainee / junior
+              Disponible para trabajo remoto · trainee / junior
             </p>
 
             <a className="topbar-contact" href="#contacto">
@@ -210,7 +227,7 @@ function App() {
 
         <section className="proof-bar" aria-label="Resumen profesional">
           <div>
-            <strong>5</strong>
+            <strong>{proyectos.length}</strong>
             <span>proyectos publicados</span>
           </div>
           <div>
@@ -227,9 +244,7 @@ function App() {
           <Habilidades habilidades={habilidades} />
         )}
 
-        <div id="sobre-mi">
-          <SobreMi />
-        </div>
+        <SobreMi />
 
         <section id="proyectos" className="projects-section">
           <div className="section-heading">
@@ -249,12 +264,16 @@ function App() {
               <Proyecto
                 key={proyecto.id}
                 titulo={proyecto.titulo}
+                tipo={proyecto.tipo}
                 descripcion={proyecto.descripcion}
+                desafio={proyecto.desafio}
+                hice={proyecto.hice}
+                aprendi={proyecto.aprendi}
                 tecnologias={proyecto.tecnologias}
                 enlace={proyecto.enlace}
                 imagen={
-                  proyecto.id === 2
-                    ? `${import.meta.env.BASE_URL}pinamar.png`
+                  proyecto.imagen
+                    ? `${import.meta.env.BASE_URL}${proyecto.imagen}`
                     : undefined
                 }
               />

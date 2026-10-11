@@ -4,17 +4,23 @@ function SobreMi() {
       <h2>Sobre mí</h2>
 
       <p>
-        Soy Gastón, desarrollador frontend y diseñador
-        gráfico en formación. Creo sitios web modernos,
-        claros y adaptables a computadoras y celulares.
+        Soy Gastón, desarrollador frontend junior y diseñador gráfico.
+        Hace cinco años me formo en desarrollo web y diseño, y en paralelo
+        diseño y fabrico muebles de madera y estructuras wood frame.
       </p>
 
       <p>
-        Estoy desarrollando proyectos con HTML, CSS,
-        JavaScript y React, mientras amplío mis conocimientos
-        en diseño gráfico, identidad visual y UX/UI.
-        Mi objetivo es crecer profesionalmente y aportar
-        soluciones útiles, funcionales y atractivas.
+        Ese oficio me dio un ojo particular para la claridad: me gusta
+        convertir ideas complejas en interfaces, planos y manuales que
+        cualquiera pueda entender. Creo sitios rápidos, adaptables y
+        accesibles con React y TypeScript, con foco en turismo.
+      </p>
+
+      <p>
+        Antes trabajé en programas deportivos y educativos en Tierra del
+        Fuego, en turismo de aventura y en logística. Eso me enseñó a
+        coordinar y a pensar en quien usa lo que construyo. Busco mi primera
+        posición remota.
       </p>
     </section>
   )

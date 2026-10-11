@@ -1,6 +1,10 @@
 interface ProyectoProps {
   titulo: string
-  descripcion: string
+  tipo?: string
+  descripcion?: string
+  desafio?: string
+  hice?: string
+  aprendi?: string
   tecnologias: string[]
   enlace: string
   imagen?: string
@@ -8,13 +12,19 @@ interface ProyectoProps {
 
 function Proyecto({
   titulo,
+  tipo,
   descripcion,
+  desafio,
+  hice,
+  aprendi,
   tecnologias,
   enlace,
   imagen,
 }: ProyectoProps) {
+  const tieneRelato = Boolean(desafio || hice || aprendi)
+
   return (
-    <article className="project-card">
+    <article className="project-card" data-tipo={tipo}>
       {imagen && (
         <a
           className="project-preview"
@@ -32,7 +42,33 @@ function Proyecto({
       )}
 
       <h3>{titulo}</h3>
-      <p>{descripcion}</p>
+
+      {tieneRelato ? (
+        <dl className="project-story">
+          {desafio && (
+            <>
+              <dt>El desafío</dt>
+              <dd>{desafio}</dd>
+            </>
+          )}
+
+          {hice && (
+            <>
+              <dt>Lo que hice</dt>
+              <dd>{hice}</dd>
+            </>
+          )}
+
+          {aprendi && (
+            <>
+              <dt>Lo que aprendí</dt>
+              <dd>{aprendi}</dd>
+            </>
+          )}
+        </dl>
+      ) : (
+        <p>{descripcion}</p>
+      )}
 
       <div className="technologies">
         {tecnologias.map((tecnologia) => (

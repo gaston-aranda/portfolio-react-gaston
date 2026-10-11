@@ -12,7 +12,7 @@ function Contacto() {
 
       <div className="contacto-enlaces">
         <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=gaston.aranda.dev@gmail.com"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=gearandagaston@gmail.com"
           className="contacto-boton"
           target="_blank"
           rel="noopener noreferrer"

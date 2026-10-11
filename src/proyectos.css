@@ -1,0 +1,48 @@
+/* Tarjetas de proyecto con relato: desafío, lo que hice y lo que aprendí */
+
+.project-card[data-tipo]::before {
+  content: attr(data-tipo);
+}
+
+.project-story {
+  margin: 0 0 24px;
+  flex-grow: 1;
+  display: grid;
+  gap: 16px;
+}
+
+.project-story dt {
+  margin: 0;
+  color: #2f6f7a;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.project-story dd {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+/* Tarjeta oscura (la primera) */
+.project-card:first-child .project-story dt {
+  color: var(--lime);
+}
+
+.project-card:first-child .project-story dd {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* Tarjetas con fondo de color (2.ª y 4.ª) */
+.project-card:nth-child(2) .project-story dt,
+.project-card:nth-child(4) .project-story dt {
+  color: var(--ink);
+}
+
+.project-card:nth-child(2) .project-story dd,
+.project-card:nth-child(4) .project-story dd {
+  color: var(--ink-soft);
+}
